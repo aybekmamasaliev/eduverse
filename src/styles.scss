@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+.custom-container {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 12px;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.fw_500 {
+  font-weight: 500;
+}
+
+.fw_600 {
+  font-weight: 600;
+}
+
+.fs_14 {
+  font-size: 14px;
+}
+
+.fs_24{
+  font-weight: 24px;
+}
+
+.c_pointer{
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .custom-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

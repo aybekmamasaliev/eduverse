@@ -1,0 +1,48 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+select {
+  background-color: white;
+}
+
+.sign_in {
+  background-color: #e1e0e0;
+}
+
+.register {
+  background-image: linear-gradient(to right, #e78324, #fff200);
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+@media (max-width: 1165px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 765px) {
+  .logo {
+    display: inline;
+  }
+}
+
+
+@media (max-width: 665px) {
+  .logo {
+    display: none;
+  }
+}
