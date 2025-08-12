@@ -1,14 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 .custom-container {
-  width: calc(100% - 100px);
+  width: calc(100% - 200px);
   margin: 0 auto;
 }
 
-.btn {
+.custom-btn {
   border-radius: 12px;
   border: none;
   padding: 12px 24px;
   font-size: 16px;
+}
+
+.fw_400{
+  font-weight: 400;
 }
 
 .fw_500 {
@@ -19,12 +23,16 @@
   font-weight: 600;
 }
 
+.fw_800{
+  font-weight: 800;
+}
+
 .fs_14 {
   font-size: 14px;
 }
 
 .fs_24{
-  font-weight: 24px;
+  font-size: 24px;
 }
 
 .c_pointer{
@@ -34,6 +42,7 @@
 .freeze-top{
   position: sticky;
   top: 0;
+  z-index: 6;
 }
 
 .fs_16{

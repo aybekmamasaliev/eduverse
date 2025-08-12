@@ -1,0 +1,67 @@
+.banner {
+  background-image: linear-gradient(to right, #e78324, #fff200);
+
+  position: relative;
+}
+
+.banner {
+  padding-block: clamp(
+    30px,
+    calc(30px + (170 - 30) * ((100vw - 350px) / (1800 - 350))),
+    170px
+  );
+  background-image: url("/assets/star.svg"),
+    linear-gradient(to right, #e78324, #fff200);
+  background-repeat: no-repeat;
+  background-position: start;
+  background-size: contain;
+}
+
+.banner-title {
+  color: #0b0300;
+  line-height: 1.15;
+  font-size: clamp(
+    28px,
+    calc(30px + (80 - 30) * ((100vw - 350px) / (1800 - 350))),
+    76px
+  );
+}
+
+.banner-description {
+  font-size: clamp(
+    14px,
+    calc(14px + (24 - 14) * ((100vw - 350px) / (1800 - 350))),
+    24px
+  );
+}
+
+.explore {
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+}
+
+.img-shadow {
+  border-radius: 60px;
+  box-shadow: -42px 0px 2px 1px #ffca42;
+  width: 100%;
+}
+
+.star {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+@media (max-width: 576px) {
+  .img-shadow {
+    width: 75%;
+      box-shadow: -22px 0px 2px 1px #ffca42;
+  }
+  
+  .img-shadow-wrapper{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}
