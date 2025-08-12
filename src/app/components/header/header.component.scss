@@ -19,10 +19,19 @@ select {
   color: #000000;
 }
 
+.sign_in:hover{
+  background-color: #d3cdcd;
+  color: #000000;
+}
+
 .register {
   background-image: linear-gradient(to right, #e78324, #fff200);
   font-weight: 600;
   color: #000000;
+}
+
+.register:hover{
+  background-image: linear-gradient(to right, #e49348, #eee31c);
 }
 
 a {

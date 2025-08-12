@@ -1,0 +1,32 @@
+.statistics {
+  background-color: #000000;
+  padding-block: 80px;
+}
+
+.statistics-title {
+  font-size: clamp(
+    28px,
+    calc(28px + (64 - 28) * ((100vw - 350px) / (1800 - 350))),
+    64px
+  );
+
+  color: #fff;
+  font-family: "Montserrat";
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.gradient_txt {
+  background-image: linear-gradient(to right, #e78324,#fff200, #fff200, #fff200);
+  -webkit-background-clip: text; /* For WebKit-based browsers */
+  background-clip: text; /* Standard property for compatibility */
+  -webkit-text-fill-color: transparent; /* For WebKit-based browsers */
+  font-weight: 500;
+
+    font-size: clamp(
+    28px,
+    calc(28px + (48 - 28) * ((100vw - 350px) / (1800 - 350))),
+    48px
+  );
+}
