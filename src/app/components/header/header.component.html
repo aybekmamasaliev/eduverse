@@ -1,0 +1,69 @@
+<div
+  class="custom-container d-flex justify-content-between align-items-center position-relative border p-4"
+>
+  <div class="fw_500 fs_24 c_pointer d-md-none" (click)="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <ul class="gap-4 fw_500 fs_14 d-none d-md-flex">
+    <li class="li">
+      <a href="">Olympiads</a>
+    </li>
+    <li class="li">
+      <a href="">Organizations</a>
+    </li>
+    <li class="li">
+      <a href="">FAQ</a>
+    </li>
+    <li class="li">
+      <a href="">About Us</a>
+    </li>
+    <li class="li">
+      <a href="">Contact Us</a>
+    </li>
+  </ul>
+  <img src="/assets/logo.svg" alt="logo" class="position-absolute logo" />
+  <div class="d-flex align-items-center gap-2">
+    <select class="rounded-3 px-3 py-2 d-none d-md-inline" [formControl]="currentlang">
+      <option value="en">EN</option>
+      <option value="ru">РУС</option>
+    </select>
+    <button class="btn sign_in">Sign In</button>
+    <button class="btn register">Register</button>
+  </div>
+  <div
+    class="mobile-menu d-md-none"
+    [ngClass]="{ 'left-0': showmenu, 'left-100': !showmenu }"
+  >
+    <div class="d-flex justify-content-end">
+      <i
+        class="fa fa-close mt-4 me-4 p-3 c_pointer"
+        (click)="showmenu = false"
+      ></i>
+    </div>
+
+    <ul class="fs_16 px-3" style="position: relative">
+      <li class="menu-item">
+        <i class="fa-solid fa-trophy pe-2"></i> Olympiads
+      </li>
+      <li class="menu-item">
+        <i class="fa fa-building pe-2"></i> Organizations
+      </li>
+      <li class="menu-item"><i class="fa fa-question-circle pe-2"></i> FAQ</li>
+      <li class="menu-item">
+        <i class="fa-solid fa-circle-info pe-2"></i> About Us
+      </li>
+      <li class="menu-item">
+        <i class="fas fa-comment-dots pe-2"></i>Contact Us
+      </li>
+    </ul>
+    <div class="dropdown  ps-3" id="dropDownMenuLang">
+      <button (click)="showDrop = !showDrop" class="bg-white w-75 p-1 rounded-3">
+        {{currentlang.value | uppercase}} <i class="fas fa-angle-down"></i>
+      </button>
+      <ul *ngIf="showDrop" class="bg-white w-75 border border-dark">
+        <li class="ling_li p-2" (click)="hideLangs('en')"><a class="dropdown-item" href="#">EN</a></li>
+        <li class="ling_li p-2" (click)="hideLangs('ru')"><a class="dropdown-item" href="#">РУС</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

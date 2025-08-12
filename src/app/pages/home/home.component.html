@@ -1,43 +1,5 @@
-<div
-  class="custom-container d-flex justify-content-between align-items-center position-relative border p-4"
->
-  <div class="fw_500 fs_24 c_pointer d-md-none ">
-    <i class="fa-solid fa-bars "></i>
-  </div>
-  <ul class=" gap-4 fw_500 fs_14 d-none d-md-flex">
-    <li>
-      <a href="">Olympiads</a>
-    </li>
-    <li>
-      <a href="">Organizations</a>
-    </li>
-    <li>
-      <a href="">FAQ</a>
-    </li>
-    <li>
-      <a href="">About Us</a>
-    </li>
-    <li>
-      <a href="">Contact Us</a>
-    </li>
-  </ul>
-  <img src="/assets/logo.svg" alt="logo" class="position-absolute logo" />
-  <div class="d-flex align-items-center gap-2">
-    <select class="rounded-3 px-3 py-2 d-none d-md-inline">
-      <option>EN</option>
-      <option>РУС</option>
-    </select>
-    <button class="btn sign_in">Sign In</button>
-    <button class="btn register">Register</button>
-  </div>
+<div class="freeze-top">
+  <app-header></app-header>
 </div>
-<!-- <div class="pt-2">
-  <div class="freeze-top py-3">
-    <app-landing-header></app-landing-header>
-  </div>
-  
-  <router-outlet></router-outlet>
-  <div id="contacts">
-    <app-landing-footer></app-landing-footer>
-  </div>
-</div> -->
+<router-outlet></router-outlet>
+<div id="contacts"></div>
