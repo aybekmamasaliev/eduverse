@@ -1,0 +1,149 @@
+.features {
+  padding-block: 100px;
+  background-color: #fff;
+}
+
+.features-title {
+  font-weight: 300;
+  font-size: clamp(
+    28px,
+    calc(28px + (50 - 28) * ((100vw - 350px) / (1800 - 350))),
+    50px
+  );
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: clamp(
+    50px,
+    calc(50px + (140 - 50) * ((100vw - 350px) / (1800 - 350))),
+    140px
+  );
+}
+
+.features-content {
+  margin-top: 140px;
+}
+
+.features-content__title {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: clamp(
+    28px,
+    calc(28px + (50 - 28) * ((100vw - 350px) / (1800 - 350))),
+    50px
+  );
+}
+
+.features-content__desk {
+  font-size: clamp(
+    16px,
+    calc(16px + (24 - 16) * ((100vw - 350px) / (1800 - 350))),
+    24px
+  );
+}
+
+.student-img {
+  width: 85%;
+}
+
+.guarantee {
+  border-radius: 2rem;
+  background-color: #fff;
+  position: absolute;
+  left: -3rem;
+  top: 40px;
+  display: flex;
+  box-shadow: -5px 5px 30px black;
+  align-items: center;
+}
+
+.medals {
+  border-radius: 2rem;
+  background-color: #fff;
+  position: absolute;
+  right: 5%;
+  top: 140px;
+  display: flex;
+  box-shadow: -5px 5px 30px black;
+  align-items: center;
+}
+
+.kaspi {
+  border-radius: 2rem;
+  background-color: #fff;
+  position: absolute;
+  left: -3rem;
+  top: 340px;
+  display: flex;
+  box-shadow: -5px 5px 30px black;
+  align-items: center;
+}
+
+.award {
+  width: 36px;
+  height: 36px;
+}
+
+.final-exam-result {
+  width: 64%;
+}
+
+@media (max-width: 1080px) {
+  .student-img {
+    width: 75%;
+  }
+
+  .kaspi {
+    top: 240px;
+  }
+
+  .final-exam-result {
+    width: 84%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .guarantee {
+    left: -2rem;
+  }
+
+  .kaspi {
+    left: -2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .w-100 {
+    width: 75%;
+    text-align: center;
+  }
+
+  .student-img {
+    text-align: center;
+    width: 70%;
+  }
+
+  .student-img__wraapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .guarantee {
+    left: 0;
+  }
+
+  .medals {
+    right: 0;
+  }
+
+  .kaspi {
+    top: 300px;
+    left: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .kaspi {
+    top: 230px;
+    left: 0;
+  }
+}
