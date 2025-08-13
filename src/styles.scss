@@ -4,6 +4,7 @@
 
 body{
   font-family: "Montserrat" ,  sans-serif;
+  color: #000;
 }
 
 
@@ -25,6 +26,10 @@ body{
   font-size: 16px;
 }
 
+.gray-btn{
+  background-color: #E9E8E8;
+}
+
 
 .fw_300{
   font-weight: 300;
@@ -40,6 +45,10 @@ body{
 
 .fw_600 {
   font-weight: 600;
+}
+
+.fw_700{
+  font-weight: 700;
 }
 
 .fw_800{
@@ -76,5 +85,6 @@ body{
   .custom-container {
     width: 100%;
     margin: 0 auto;
+    padding-inline: 1rem;
   }
 }
