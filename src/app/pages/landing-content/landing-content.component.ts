@@ -6,6 +6,7 @@ import { PartnersComponent } from '../../components/partners/partners.component'
 import { SchoolsComponent } from '../../components/schools/schools.component';
 import { ReportGalleryComponent } from '../../components/report-gallery/report-gallery.component';
 import { NewsComponent } from "../../components/news/news.component";
+import { VideoComponent } from "../../components/video/video.component";
 
 @Component({
   selector: 'app-landing-content',
@@ -16,7 +17,8 @@ import { NewsComponent } from "../../components/news/news.component";
     PartnersComponent,
     SchoolsComponent,
     ReportGalleryComponent,
-    NewsComponent
+    NewsComponent,
+    VideoComponent
 ],
   templateUrl: './landing-content.component.html',
   styleUrl: './landing-content.component.scss',
