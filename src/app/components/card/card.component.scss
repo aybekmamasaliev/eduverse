@@ -1,0 +1,17 @@
+.product-card {
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+}
+
+.card-banner {
+  min-height: 110px;
+  background-image: linear-gradient(to right, #e78324, #fff200);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  position: relative;
+  padding: 1rem;
+}

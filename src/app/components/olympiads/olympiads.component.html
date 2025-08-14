@@ -1,0 +1,144 @@
+<div class="olympiads">
+  <div class="custom-container" id="competition">
+    <div class="text-center fs_26 small-screen-txt fw_700">
+      {{ "Olympiads" }}
+    </div>
+    <div class="row mt-5">
+      <div
+        class="col-12 col-sm-6 col-lg-4 col-xl-3"
+        *ngFor="let product of products | slice:0:8"
+      >
+        <div class="product-card border" (click)="navigateProduct(product)">
+          <div class="card-banner">
+            <div class="text-white fw_600">{{ product?.brand }}</div>
+            <div class="text-white fw_600 product-title">
+              {{ product?.title }}
+            </div>
+            <p
+              class="status"
+              [ngClass]="{
+              'registered': product?.status === 'REGISTERED',
+              'upcoming': product?.status === 'UPCOMING',
+              'open': product?.status === 'REGISTRATION_OPEN',
+              'closed': product?.status === 'CLOSED',
+              'ongoing': product?.status === 'ONGOING',
+              'awaiting': product?.status === 'AWAITING_RESULT',
+              'completed': product?.status === 'COMPLETED',
+              'appeal': product?.status === 'AWAITING_APPEAL',
+              'on_appeal': product?.status === 'ON_APPEAL',
+          }"
+            >
+              {{ product?.status }}
+            </p>
+            <img src="/assets/logo.svg" class="logo" alt="logo" />
+          </div>
+          <div class="card-info">
+            <div class="d-flex mt-3 fs_12 fw_400 color_math">
+              <p *ngFor="let subject of product?.subjects">{{ subject }}</p>
+            </div>
+            <div class="d-flex mt-3 line-limit-1">
+              <p
+                class="filter-result"
+                *ngIf="product?.visibleLevel === 'global'"
+              >
+                {{ product?.visibleLevel }}
+              </p>
+              <p
+                class="filter-result"
+                *ngFor="
+                  let countryId of product?.visibleCountries | slice : 0 : 1
+                "
+              >
+                {{ countryId }}
+              </p>
+              <p
+                class="filter-result"
+                *ngIf="
+                  product?.visibleLevel === 'country' &&
+                  1 < product?.visibleCountries.length
+                "
+                title="{{ product?.visibleCountries }}"
+              >
+                +{{ product?.visibleCountries.length - 1 }}
+                {{ "countries" }}
+              </p>
+              <!-- <p class="filter-result" *ngFor="let school of product?.visibleSchools">{{ school }}</p> -->
+              <div
+                class="filter-result"
+                *ngIf="
+                  product?.visibleLevel === 'school' &&
+                  1 < product?.visibleSchools.length
+                "
+              >
+                {{ product?.visibleSchools[0] }}
+              </div>
+              <div
+                class="filter-result"
+                *ngIf="
+                  product?.visibleLevel === 'school' &&
+                  1 < product?.visibleSchools.length
+                "
+              >
+                +{{ product?.visibleSchools.length - 1 }}
+                {{ "schools" }}
+              </div>
+              <div
+                class="filter-result"
+                *ngIf="
+                  product?.visibleLevel === 'school' &&
+                  1 === product?.visibleSchools.length
+                "
+              >
+                {{ product?.visibleSchools[0] }}
+              </div>
+              <p class="filter-result">
+                {{ "grade" }} {{ product?.gradeFrom }}
+                {{
+                  product?.gradeFrom === product?.gradeTo
+                    ? ""
+                    : " - " + product?.gradeTo
+                }}
+              </p>
+            </div>
+            <p class="card-description"></p>
+            <div class="period-info">
+              <div>
+                <p class="text-secondary fs_12 fw_400">
+                  {{ "competition_period" }}:
+                </p>
+                <p class="fs_12 fw_600 text-dark mt-1">
+                  {{ product.startAt | date : "dd MMM yyyy" }} -
+                  {{ product.finishAt | date : "dd MMM yyyy" }}
+                </p>
+              </div>
+              <p
+                class="fs_20 fw_700"
+                *ngIf="
+                  ['UPCOMING', 'REGISTRATION_OPEN'].includes(product?.status) ||
+                  !product?.status
+                "
+              >
+                {{ product?.price }} {{ product?.currency }}
+              </p>
+              <p
+                class="fs_20 fw_700"
+                *ngIf="
+                  ['REGISTERED', 'AWAITING_RESULT', 'ONGOING'].includes(
+                    product?.status
+                  )
+                "
+              >
+                {{ "paid" }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <button class="custom-btn black-btn" (click)="navigateCompetitions()">
+        Explore more
+      </button>
+    </div>
+  </div>
+</div>

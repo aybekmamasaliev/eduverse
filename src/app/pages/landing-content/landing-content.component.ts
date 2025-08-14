@@ -7,6 +7,7 @@ import { SchoolsComponent } from '../../components/schools/schools.component';
 import { ReportGalleryComponent } from '../../components/report-gallery/report-gallery.component';
 import { NewsComponent } from "../../components/news/news.component";
 import { VideoComponent } from "../../components/video/video.component";
+import { OlympiadsComponent } from "../../components/olympiads/olympiads.component";
 
 @Component({
   selector: 'app-landing-content',
@@ -18,7 +19,8 @@ import { VideoComponent } from "../../components/video/video.component";
     SchoolsComponent,
     ReportGalleryComponent,
     NewsComponent,
-    VideoComponent
+    VideoComponent,
+    OlympiadsComponent
 ],
   templateUrl: './landing-content.component.html',
   styleUrl: './landing-content.component.scss',

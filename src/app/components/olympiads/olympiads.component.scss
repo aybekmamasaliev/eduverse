@@ -1,0 +1,172 @@
+.olympiads {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  background-color: #f7f7f8;
+}
+
+.small-screen-txt {
+  font-size: calc(20px + (50 - 30) * ((100vw - 350px) / (1800 - 350)));
+}
+
+.request_btn {
+  background-color: black;
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  color: white;
+  border-radius: 12px;
+}
+
+.request_btn:hover {
+  opacity: 0.7;
+}
+
+.row {
+  padding-inline: 0 !important;
+  margin-inline: 0 !important;
+}
+
+.product-card {
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+}
+
+.card-banner {
+  min-height: 110px;
+  background-image: linear-gradient(to right, #e78324, #fff200);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  position: relative;
+  padding: 1rem;
+}
+
+
+.product-card {
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+}
+
+.product-card:hover {
+  box-shadow: rgba(112, 107, 107, 0.28) 0px 0px 8px;
+  cursor: pointer;
+}
+
+.product-title{
+  width: calc(100% - 85px);
+}
+
+
+
+.status {
+  padding: 6px 14px;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  bottom: -1rem;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.logo {
+  position: absolute;
+  right: 16px;
+  bottom: -25px;
+  width: 86px;
+  height: 86px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: rgba(112, 107, 107, 0.28) 0px 0px 8px;
+}
+
+.card-info {
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.filter-result {
+  font-weight: 400;
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: 24px;
+  border: 1px solid #e2e7eb;
+  margin-right: 4px;
+  margin-top: 6px;
+}
+
+.upcoming {
+  background-color: #F8ECD6;
+  color: #D28C00;
+}
+
+.open {
+  background-color: #ECD6F6;
+  color: #8700C8;
+}
+
+.unpublished {
+  color: #fff;
+  background-color: #8700C8;
+}
+
+.closed {
+  background-color: #F4E3E3;
+  color: #BC5152;
+}
+
+.registered {
+  background-color: #edf4f0;
+  color: #4d956a;
+}
+
+.ongoing {
+  background-color: #DFEAF6;
+  color: #377FC7;
+}
+
+.awaiting {
+  background-color: #E9E6EC;
+  color: #4B3363;
+}
+
+.completed {
+  background-color: #33A060;
+  color: #ffffff;
+}
+
+.appeal {
+  background-color: #E9E6EC;
+  color: #4B3363;
+}
+
+.on_appeal {
+  background-color: #E9E6EC;
+  color: #4B3363;
+}
+
+
+.card-description {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.period-info {
+  padding-top: 12px;
+  border-top: 1px solid #e2e7eb;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
