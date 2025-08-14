@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
-import { BannerComponent } from "../../components/banner/banner.component";
-import { StatisticsComponent } from "../../components/statistics/statistics.component";
-import { FeaturesComponent } from "../../components/features/features.component";
-import { PartnersComponent } from "../../components/partners/partners.component";
-import { SchoolsComponent } from "../../components/schools/schools.component";
+import { BannerComponent } from '../../components/banner/banner.component';
+import { StatisticsComponent } from '../../components/statistics/statistics.component';
+import { FeaturesComponent } from '../../components/features/features.component';
+import { PartnersComponent } from '../../components/partners/partners.component';
+import { SchoolsComponent } from '../../components/schools/schools.component';
+import { ReportGalleryComponent } from '../../components/report-gallery/report-gallery.component';
 
 @Component({
   selector: 'app-landing-content',
-  imports: [BannerComponent, StatisticsComponent, FeaturesComponent, PartnersComponent, SchoolsComponent],
+  imports: [
+    BannerComponent,
+    StatisticsComponent,
+    FeaturesComponent,
+    PartnersComponent,
+    SchoolsComponent,
+    ReportGalleryComponent,
+  ],
   templateUrl: './landing-content.component.html',
-  styleUrl: './landing-content.component.scss'
+  styleUrl: './landing-content.component.scss',
 })
-export class LandingContentComponent {
-
-}
+export class LandingContentComponent {}

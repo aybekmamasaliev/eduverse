@@ -1,0 +1,70 @@
+.report {
+  padding-block: 100px;
+  background-color: #fafafa;
+}
+
+.report-title {
+  font-size: clamp(
+    20px,
+    calc(20px + (50 - 28) * ((100vw - 350px) / (1800 - 350))),
+    50px
+  );
+
+  text-align: center;
+  font-weight: 400;
+}
+
+.text-orange {
+  color: #e78324;
+}
+
+.small-imgs {
+  width: calc(((100% - 24px) / 100) * 66);
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.large-imgs {
+  width: calc(((100% - 24px) / 100) * 34);
+}
+
+.all-team {
+  width: calc(((100% - 24px) / 100) * 62);
+}
+
+.building-team {
+  width: calc(((100% - 24px) / 100) * 38);
+}
+
+.students-flag {
+  width: calc(((100% - 24px) / 100) * 52);
+}
+
+.students-on-stage {
+  width: calc(((100% - 24px) / 100) * 48);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery{
+  margin-top: 90px;
+}
+
+@media (max-width: 576px) {
+  .small-imgs {
+    width: 100%;
+  }
+
+  .large-imgs {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .large-imgs>img {
+    width: 50%;
+  }
+}
