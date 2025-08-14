@@ -1,0 +1,35 @@
+<div class="event-container">
+  <div
+    class="color_orange fs_14 fw_500 mt-5 text-center c_pointer"
+    (click)="navigateHome()"
+  >
+    Home
+  </div>
+  <div class="event-title fw_700 text-center mt-5">{{ article.title }}</div>
+  <div class="d-flex justify-content-between mt-5">
+    <div class="fw_500 fs_14 color_violet">
+      {{article.location}}
+    </div>
+    <div class="fw_500 fs_14 color_orange">{{ article.date }}</div>
+  </div>
+  <div class="mt-5 d-flex events-imgs transsition">
+    <div
+      *ngFor="let img of imgs"
+      class="transsition px-3 flex-shrink-0 w-100"
+      [ngStyle]="{ transform: 'translateX(' + dynamicValue + '%)' }"
+    >
+      <img [src]="img.path" alt="" class="event-photo" />
+    </div>
+  </div>
+
+
+  <div class="d-flex justify-content-center gap-2 mt-5 mb-5">
+    <button
+      *ngFor="let _ of imgs; let i = index"
+      class="scroll-btns"
+      [ngClass]="{ active: choosenImg === i }"
+      (click)="showImg(i)"
+    ></button>
+  </div>
+  <div [innerHTML]="article.content"></div>
+</div>

@@ -1,0 +1,37 @@
+<div class="news custom-container">
+  <div class="news-title">НОВОСТИ</div>
+  <div class="news-list mt-5" (scroll)="onScroll($event)">
+    <div
+      class="d-flex transsition"
+      [ngStyle]="{ transform: 'translateX(' + dynamicValue + '%)' }"
+     >
+      <div
+        *ngFor="let article of articles; let i = index"
+        class="col-6 col-md-4 px-2"
+      >
+        <div class="px-2" (click)="navigateSpecificNews(article.id)">
+          <img src="/assets/news-1.svg" alt="" class="event-img" />
+          <div class="fw_700 fs_20_var mt-3">{{ article.title }}</div>
+          <div class="event-description">{{ article.content }}</div>
+          <div class="d-flex justify-content-between mt-3">
+            <div class="color_pink fw_400 fs_14">{{ article?.location }}</div>
+            <div class="fw_500 fs_14 text-secondary">{{ article?.date }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center gap-2 mt-5">
+    <button
+      *ngFor="let _ of buttonArray; let i = index"
+      class="scroll-btns"
+      [ngClass]="{ active: activeButtonIndex === i }"
+      (click)="scrollTo(i)"
+    ></button>
+  </div>
+  <div class="text-center btn-wrapper pt-2">
+    <button class="custom-btn black-btn" (click)="navigateAllNews()">
+      Показать еще
+    </button>
+  </div>
+</div>
