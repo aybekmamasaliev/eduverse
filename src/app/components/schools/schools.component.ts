@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalVariableService } from '../../services/global-variable.service';
 
 @Component({
   selector: 'app-schools',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class SchoolsComponent {
 
+  constructor(private globalvar: GlobalVariableService){}
+
+  openModal(){
+    this.globalvar.showModal.next(true)
+  }
 }

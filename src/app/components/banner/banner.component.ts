@@ -6,7 +6,7 @@ import { GlobalVariableService } from '../../services/global-variable.service';
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [CommonModule, ModalComponent],
+  imports: [CommonModule],
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss'],
 })

@@ -3,7 +3,7 @@
   class="modal"
   (click)="hideModal()"
 ></div>
-<div *ngIf="globalVar.showModal | async" class="position-absolute">
+<div *ngIf="globalVar.showModal | async" class="position-fixed">
   <div class="rounded-4 p-4 position-relative bg-white px-sm-5">
     <button class="border-none" (click)="hideModal()">
       <i class="fa fa-times" aria-hidden="true"></i>
