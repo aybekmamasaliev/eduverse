@@ -5,20 +5,20 @@
     <i class="fa-solid fa-bars"></i>
   </div>
   <ul class="gap-4 fw_500 fs_14 d-none d-md-flex">
-    <li class="li">
-      <a href="">Olympiads</a>
+    <li class="li" (click)="navigateToSection('competition')">
+      Olympiads
     </li>
-    <li class="li">
-      <a href="">Organizations</a>
+    <li class="li" (click)="navigateToSection('organizations')">
+      Organizations
     </li>
-    <li class="li">
-      <a href="">FAQ</a>
+    <li class="li" (click)="navigateToSection('footer')">
+      FAQ
     </li>
-    <li class="li">
-      <a href="">About Us</a>
+    <li class="li"  (click)="navigateToSection('statistics')">
+      About Us
     </li>
-    <li class="li">
-      <a href="">Contact Us</a>
+    <li class="li" (click)="navigateToSection('footer')">
+      Contact Us
     </li>
   </ul>
   <img src="/assets/logo.svg" alt="logo" class="position-absolute logo c_pointer" />

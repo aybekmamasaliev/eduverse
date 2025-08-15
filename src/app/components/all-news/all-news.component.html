@@ -1,0 +1,26 @@
+<div class="container-lg">
+    <div class="fw_300 news-title text-center mt-5">ВСЕ НОВОСТИ</div>
+    <div class="row mt-5" *ngIf="news.length">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pt-3 mb-5 " (click)="navigateSpecificNews(item.id)"
+            *ngFor="let item of news">
+            <div class="c_pointer p-1">
+                <img src="/assets/news-1.svg" alt="" class="news-img" />
+                <div class="fw_700 fs_20 mt-3">
+                    {{item.title}}
+                </div>
+                <div class="news-description mt-3">
+                    {{item.description}}
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                    <div class="fw_500 fs_14 color_violet">{{item.location}}</div>
+                    <div class="fw_500 fs_14 text-secondary">{{item.date}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" my-5 text-center" *ngIf="0 === news.length">
+      Empty
+    </div>
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="onPageChange($event)">
+    </mat-paginator>
+</div>

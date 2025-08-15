@@ -235,10 +235,10 @@ export class NewsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   navigateSpecificNews(id: number) {
-    this.router.navigate([`landing/event/${id}`]);
+    this.router.navigate([`event/${id}`]);
   }
 
   navigateAllNews() {
-    this.router.navigateByUrl('landing/news');
+    this.router.navigateByUrl('news');
   }
 }
