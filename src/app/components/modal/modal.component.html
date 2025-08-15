@@ -1,0 +1,48 @@
+<div
+  *ngIf="globalVar.showModal | async"
+  class="modal"
+  (click)="hideModal()"
+></div>
+<div *ngIf="globalVar.showModal | async" class="position-absolute">
+  <div class="rounded-4 p-4 position-relative bg-white px-sm-5">
+    <button class="border-none" (click)="hideModal()">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+
+    <div class="modal-title text-center fs_24 mb-4">Оставить заявку</div>
+    <form class="pt-3">
+      <div>
+        <input
+          type="text"
+          class="input mb-3 d-block"
+          placeholder="Полное имя*"
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          class="input mb-3 d-block"
+          placeholder="Организация*"
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          class="input mb-3 d-block"
+          placeholder="Должность*"
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          class="input mb-3 d-block"
+          placeholder="Электронная почта*"
+        />
+      </div>
+      <div>
+        <input type="text" class="input mb-3 d-block" placeholder="Телефон*" />
+      </div>
+      <button class="w-100 mt-4 black-btn custom-btn">Отправить</button>
+    </form>
+  </div>
+</div>

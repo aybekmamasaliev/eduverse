@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ModalComponent } from '../modal/modal.component';
+import { GlobalVariableService } from '../../services/global-variable.service';
 
 @Component({
   selector: 'app-banner',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, ModalComponent],
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.scss'
+  styleUrls: ['./banner.component.scss'],
 })
-export class BannerComponent {
+export class BannerComponent implements OnInit {
+  constructor(private globalVar: GlobalVariableService) {}
 
+  ngOnInit(): void {}
+
+  becomePartner() {
+    this.globalVar.showModal.next(true);
+  }
 }
