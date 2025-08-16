@@ -1,6 +1,6 @@
 <div
-  class="custom-container d-flex justify-content-between align-items-center position-relative p-4"
->
+  class="custom-container freeze-top d-flex justify-content-between align-items-center position-relative p-4"
+ >
   <div class="fw_500 fs_24 c_pointer d-md-none" (click)="toggleMenu()">
     <i class="fa-solid fa-bars"></i>
   </div>
@@ -45,17 +45,20 @@
     </div>
 
     <ul class="fs_16 px-3" style="position: relative">
-      <li class="menu-item">
+      <li class="menu-item" (click)="navigateToSection('competition')">
         <i class="fa-solid fa-trophy pe-2"></i> Olympiads
       </li>
-      <li class="menu-item">
+      <li class="menu-item" (click)="navigateToSection('organizations')">
         <i class="fa fa-building pe-2"></i> Organizations
       </li>
-      <li class="menu-item"><i class="fa fa-question-circle pe-2"></i> FAQ</li>
-      <li class="menu-item">
-        <i class="fa-solid fa-circle-info pe-2"></i> About Us
+      <li class="menu-item" (click)="navigateToSection('footer')">
+        <i class="fa fa-question-circle pe-2"></i> FAQ
       </li>
-      <li class="menu-item">
+      <li class="menu-item" (click)="navigateToSection('statistics')">
+        <i class="fa-solid fa-circle-info pe-2">
+        </i> About Us
+      </li>
+      <li class="menu-item" (click)="navigateToSection('footer')">
         <i class="fas fa-comment-dots pe-2"></i>Contact Us
       </li>
     </ul>

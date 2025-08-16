@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 body{
   font-family: "Montserrat" ,  sans-serif;
   color: #000;
@@ -72,7 +75,10 @@ body{
 }
 
 .freeze-top{
-  position: sticky;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 100;
   top: 0;
   z-index: 6;
 }
@@ -89,5 +95,3 @@ body{
   }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

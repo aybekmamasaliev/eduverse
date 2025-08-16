@@ -42,5 +42,6 @@ export class HeaderComponent implements OnInit {
 
   navigateToSection(section: string) {
     this.router.navigate([''], { queryParams: { section: section } });
+    this.showmenu = false;
   }
 }

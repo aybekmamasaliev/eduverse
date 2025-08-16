@@ -1,7 +1,10 @@
-<div class="freeze-top bg-white border-bottom">
-  <app-header></app-header>
+<div class="top-padding">
+  <div class="freeze-top bg-white border-bottom">
+    <app-header></app-header>
+  </div>
+  <router-outlet></router-outlet>
+  <div id="footer">
+    <app-footer></app-footer>
+  </div>
+  <app-modal></app-modal>
 </div>
-<router-outlet></router-outlet>
-<div id="contacts"></div>
-<app-footer></app-footer>
-<app-modal></app-modal>
